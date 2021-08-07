@@ -1,1 +1,1 @@
-# boilerplate-api-node-with-graphql-and-firebase-auth
+# boilerplate: api Nodejs with Graphql and Firebase Auth
