@@ -1,0 +1,25 @@
+directive @isAuthenticated on FIELD | FIELD_DEFINITION
+directive @isAdmin on FIELD | FIELD_DEFINITION
+
+type User {
+  name: String
+  age: Int
+  role: String
+  email: String
+}
+
+input InputUser {
+  name: String!
+  age: Int!
+  role: String!
+  email: String!
+  password: String!
+}
+
+type Query {
+  user(id: String): User @isAuthenticated
+}
+
+type Mutation {
+  createUser(user: InputUser): User 
+}
